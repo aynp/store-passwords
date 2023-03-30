@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/aynp/storing-passwords/src/database"
+	"github.com/aynp/store-passwords/src/database"
 	"github.com/spf13/viper"
 	"log"
 )

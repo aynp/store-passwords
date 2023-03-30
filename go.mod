@@ -1,4 +1,4 @@
-module github.com/aynp/storing-passwords
+module github.com/aynp/store-passwords
 
 go 1.20
 

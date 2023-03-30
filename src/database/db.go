@@ -1,7 +1,7 @@
 package database
 
 import (
-	"github.com/aynp/storing-passwords/src/models"
+	"github.com/aynp/store-passwords/src/models"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 	"log"
