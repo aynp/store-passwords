@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"github.com/aynp/store-passwords/src/config"
+	"github.com/aynp/store-passwords/src/server"
 )
 
 func init() {
@@ -11,4 +12,5 @@ func init() {
 
 func main() {
 	fmt.Println("Hello World")
+	server.Serve()
 }
