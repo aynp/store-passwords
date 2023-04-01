@@ -2,10 +2,11 @@ package main
 
 import (
 	"fmt"
+	"github.com/aynp/store-passwords/src/config"
 )
 
 func init() {
-	setConfig()
+	config.SetConfig()
 }
 
 func main() {

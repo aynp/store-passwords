@@ -18,5 +18,8 @@ func Connect(url string) {
 }
 
 func AutoMigrate() {
-	DB.AutoMigrate(models.User{})
+	err := DB.AutoMigrate(models.User{})
+	if err != nil {
+		log.Fatalf("Could not AutoMigrate Models")
+	}
 }

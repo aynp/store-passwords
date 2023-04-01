@@ -1,4 +1,4 @@
-package main
+package config
 
 import (
 	"github.com/aynp/store-passwords/src/database"
@@ -6,7 +6,7 @@ import (
 	"log"
 )
 
-func setConfig() {
+func SetConfig() {
 	viper.SetConfigFile(".env")
 	viper.AddConfigPath(".")
 
