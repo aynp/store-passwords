@@ -1,21 +1,23 @@
 package server
 
 import (
-	"fmt"
+	"github.com/gin-gonic/gin"
 	"log"
-	"net/http"
 )
 
 func Serve() {
-	http.HandleFunc("/", handler)
-	if err := http.ListenAndServe(":8000", nil); err != nil {
-		log.Fatalf("Failed to start the server: %v", err)
-	}
-}
+	router := gin.Default()
+	router.LoadHTMLGlob("templates/*.html")
 
-func handler(w http.ResponseWriter, _ *http.Request) {
-	_, err := fmt.Fprintf(w, "Hello!")
-	if err != nil {
-		log.Fatalf("Error: %v", err)
+	router.GET("/ping", ping)
+
+	router.GET("/login", loginPage)
+	router.POST("/login", login)
+
+	router.GET("/signup", signupPage)
+	router.POST("/signup", signup)
+
+	if err := router.Run(); err != nil {
+		log.Fatalf("Failed to start the server: %v", err)
 	}
 }
