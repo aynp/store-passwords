@@ -11,8 +11,9 @@ func loginPage(c *gin.Context) {
 }
 
 func login(c *gin.Context) {
-	uname, pass := c.PostForm("username"), c.PostForm("password")
-	fmt.Println(uname, pass)
+	username := c.PostForm("username")
+	password := c.PostForm("password")
+	fmt.Println(username, password)
 	c.JSON(http.StatusOK, gin.H{
 		"test": "test",
 	})

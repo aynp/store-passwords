@@ -15,6 +15,7 @@ func Connect(url string) {
 	if err != nil {
 		log.Fatalf("Could not connect to the database: %v", err)
 	}
+	log.Printf("Connected to the database successfully")
 }
 
 func AutoMigrate() {
